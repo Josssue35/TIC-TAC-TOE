@@ -1,44 +1,47 @@
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
 }
 
-.board {
+.game {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffffff;
+}
+
+.game-board {
+  background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .board-row {
   display: flex;
-  justify-content: center;
 }
 
 .square {
   width: 100px;
   height: 100px;
   margin: 5px;
-  background-color: #d1e8e2;
-  border: 2px solid #4a90e2;
+  background-color: #fff;
+  border: 2px solid #000;
   border-radius: 5px;
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #000;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .square:hover {
-  background-color: #b2dfdb;
+  background-color: #f0f0f0;
   transform: scale(1.05);
 }
 
@@ -47,5 +50,37 @@ body {
 }
 
 .square:active {
-  background-color: #80cbc4;
+  background-color: #ccc;
+}
+
+.status {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.game-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-info ol {
+  padding-left: 20px;
+}
+
+.game-info button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000;
+  text-decoration: underline;
+}
+
+.game-info button:hover {
+  color: #333;
 }
